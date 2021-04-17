@@ -26,7 +26,7 @@ from kubernetes.stream import stream
 
 
 def exec_commands(api_instance):
-    name = 'busybox-test'
+    name = 'hello'
     resp = None
     try:
         resp = api_instance.read_namespaced_pod(name=name,
@@ -46,7 +46,7 @@ def exec_commands(api_instance):
             },
             'spec': {
                 'containers': [{
-                    'image': 'busybox',
+                    'image': 'jamescalam/hello-api',
                     'name': 'sleep',
                     "args": [
                         "/bin/sh",
