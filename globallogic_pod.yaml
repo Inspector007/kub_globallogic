@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: api-pod
+  labels:
+    run: globallogicApi
+spec:
+  containers:
+    - name: globallogic
+      image: image.globallogic.com/interview
+      ports:
+        - containerPort: 3000
