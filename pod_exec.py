@@ -26,12 +26,11 @@ from kubernetes.stream import stream
 
 
 def exec_commands(api_instance):
-    # name = 'busybox-test'
-    name = 'globallogic'
+    name = 'busybox-test'
     resp = None
     try:
         resp = api_instance.read_namespaced_pod(name=name,
-                                                namespace='default')
+                                                namespace='busybox')
     except ApiException as e:
         if e.status != 404:
             print("Unknown error: %s" % e)
@@ -47,7 +46,7 @@ def exec_commands(api_instance):
             },
             'spec': {
                 'containers': [{
-                    'image': 'image.globallogic.com/interview',
+                    'image': 'busybox',
                     'name': 'sleep',
                     "args": [
                         "/bin/sh",
