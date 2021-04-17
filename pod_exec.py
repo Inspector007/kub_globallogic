@@ -30,7 +30,7 @@ def exec_commands(api_instance):
     resp = None
     try:
         resp = api_instance.read_namespaced_pod(name=name,
-                                                namespace='default')
+                                                namespace='busybox')
     except ApiException as e:
         if e.status != 404:
             print("Unknown error: %s" % e)
