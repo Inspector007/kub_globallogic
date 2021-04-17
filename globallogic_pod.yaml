@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: api-pod
+  name: hello
   labels:
-    run: globallogicApi
+    run: hello-api
 spec:
   containers:
     - name: globallogic
-      image: image.globallogic.com/interview
+      image: jamescalam/hello-api
       ports:
         - containerPort: 3000

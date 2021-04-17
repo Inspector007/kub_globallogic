@@ -54,5 +54,8 @@ Sol -
 	kubectl expose deployment globallogic --type=NodePort --port=8080
 
 17 - kubectl delete service globallogic
-
+18 - kubectl delete pods <name>
+19 - kubectl delete service <name>
+20 - kubectl apply -f pod.yaml
+21 - kubectl apply -f pod_service.yaml
 
