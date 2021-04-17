@@ -14,16 +14,17 @@ test kubernates working env
 4.       Write a program to check if the pod name “interview” is running on namespace "<>" or not, and if not then create it.
 
 
-Sol - 
- 1-  python -m venv kub_env
- 2- git clone --recursive https://github.com/kubernetes-client/python.git
- 3- cd python
- 4- python setup.py install
- 5- UserWarning: The version specified ('17.0.0-snapshot') is an invalid version, 
- 	this may not work as expected with newer versions of setuptools,pip, and PyPI.
- 6- error: supposed package directory 'kubernetes\config' exists, but is not a directory
- 7- pip install kubernates
- 8- pip install freeze
+# Performed steps 
+
+1 -  python -m venv kub_env
+2 - git clone --recursive https://github.com/kubernetes-client/python.git
+3 - cd python
+4 - python setup.py install
+5 - UserWarning: The version specified ('17.0.0-snapshot') is an invalid version, 
+	this may not work as expected with newer versions of setuptools,pip, and PyPI.
+6 - error: supposed package directory 'kubernetes\config' exists, but is not a directory
+7 - pip install kubernates
+8 - pip install freeze
 	Output:
 			cachetools==4.2.1
 			certifi==2020.12.5
@@ -42,11 +43,11 @@ Sol -
 			six==1.15.0
 			urllib3==1.26.4
 			websocket-client==0.58.0
- 9 - gcloud components install kubectl
- 10 - sudo apt-get install kubectl
- 11 - kubectl version --client
- 12 - kubectl cluster-info
- 13 -  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+9 - gcloud components install kubectl
+10 - sudo apt-get install kubectl
+11 - kubectl version --client
+12 - kubectl cluster-info
+13 -  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
  	   sudo install minikube-linux-amd64 /usr/local/bin/minikube
 14 - minikube start
 15 - https://minikube.sigs.k8s.io/docs/start/
