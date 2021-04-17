@@ -38,4 +38,11 @@ Sol -
 			six==1.15.0
 			urllib3==1.26.4
 			websocket-client==0.58.0
- 9 - 
+ 9 - gcloud components install kubectl
+ 10 - sudo apt-get install kubectl
+ 11 - kubectl version --client
+ 12 - kubectl cluster-info
+ 13 -  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+ sudo install minikube-linux-amd64 /usr/local/bin/minikube
+14 - minikube start
+15 - https://minikube.sigs.k8s.io/docs/start/
