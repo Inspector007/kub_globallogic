@@ -31,7 +31,7 @@ def exec_commands(api_instance):
     resp = None
     try:
         resp = api_instance.read_namespaced_pod(name=name,
-                                                namespace='globallogic')
+                                                namespace='default')
     except ApiException as e:
         if e.status != 404:
             print("Unknown error: %s" % e)
@@ -58,10 +58,10 @@ def exec_commands(api_instance):
             }
         }
         resp = api_instance.create_namespaced_pod(body=pod_manifest,
-                                                  namespace='globallogic')
+                                                  namespace='default')
         while True:
             resp = api_instance.read_namespaced_pod(name=name,
-                                                    namespace='globallogic')
+                                                    namespace='default')
             if resp.status.phase != 'Pending':
                 break
             time.sleep(1)
