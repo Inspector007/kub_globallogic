@@ -1,6 +1,6 @@
 
 def main():
-	from kubernetes import client, config
+    from kubernetes import client, config
     # config.load_incluster_config()
     config.load_kube_config()
 
@@ -17,9 +17,9 @@ def list_of_all_method_from_corev1api():
     # config.load_incluster_config()
     # from kubernetes.client import Configuration
     '''
-    	Notice that getmembers returns a list of 2-tuples. 
-    	The first item is the name of the member, 
-    	the second item is the value.
+        Notice that getmembers returns a list of 2-tuples. 
+        The first item is the name of the member, 
+        the second item is the value.
     '''
     import inspect
     from kubernetes import config
