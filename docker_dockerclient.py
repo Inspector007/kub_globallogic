@@ -9,18 +9,18 @@ try:
 	container = None
 	try:
 		#container = client.containers.run('inspector007/hello-world-testing1:0.9', detach=True)
-		for container_obj in client.containers.list(all = True):
-			#if container_obj.id == 'e8da7eafe1fb':
-			container = container_obj
-			break 
+		#for container_obj in client.containers.list(all = True):
+		container = client.containers.list(all = True, filters={'name':'alpinetest'})[0]
+		#container = container_obj
+		#break
 	except Exception as e:
 		print(f'container exception as {e}')
 	try:
-		image_created = container.commit(repository="inspector007/hello-world-testing1:0.9",tag='')
+		image_created = container.commit(repository="inspector007/hello-world-testing1:alpine-0.4",tag='')
 	except Exception as e:
 		print(f'commit exception as {e}')
 	print(image_created)
-	client.api.push('inspector007/hello-world-testing1:0.9')
+	return_test = client.images.push(repository='inspector007/hello-world-testing1:alpine-0.4')
 except Exception as e:
 	print(f'error occured {e}')
 
