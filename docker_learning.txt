@@ -1,0 +1,10 @@
+# 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
+docker images -a
+docker pull <image-name>
+docker image rm <image-id>
+
+docker ps -a
+docker run --name <new-name> -it <existing image-id> 
+docker container rm <container-id>
+
+
